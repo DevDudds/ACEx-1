@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFBA Paulo Afonso | Minicursos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+
+    <main id="topo">
+        <section class="hero">
+            <div class="container_hero">
+                <p class="titulohero">IFBA Paulo Afonso</p>
+                <h1 id="titulohero2">Minicursos Disponíveis</h1>
+                <p class="herosubtitulo">
+                    Expanda seus conhecimentos com nossos minicursos gratuítos.
+                    Aprenda no seu ritmo com conteúdo de qualidade.
+                </p>
+                <div class="hero_busca">
+                    <a class="btn" href="#cursos">Ver cursos</a>
+                    <a class="btn2" href="#destaques">Destaques</a>
+                </div>
+            </div>
+        </section>
+
+<!-- adicao da funcionalidade de filtros para a pagina de cursos jsguys deixei um form ai p facilitar a vida de vcs -->
+
+        <section class="filtros">
+
+            <div class="container">
+                
+                <h2 class="titulo_secao">Filtre por área</h2>
+                <form class="filters__form" action="#" method="get">
+                    <div class="field">
+                        <label for="area">Área</label>
+                        <select id="area" >
+                            <option value="tecnologia">Tecnologia</option>
+                        </select>
+                    </div>
+
+                    <div class="busca">
+                        <label for="busca">Buscar</label>
+                        <input id="busca" type="text" placeholder="Digite o nome do curso" />
+                    </div>
+                    <button class="btn" type="submit">Aplicar filtros</button>
+                </form>
+            </div>
+         </section>
+
+
+        <!-- efeitos visuais -->
+        <section id="destaques" class="sec_destaques">
+
+            <div class="container">
+
+                <h2 id="destaque_titulo" class="titulo_dtq">Cursos em destaque</h2>
+                
+                <!-- Cards dos cursos que tem destaque = true no JSON -->
+                <div class="cards_cursos" id="cards_cursos_destaques"></div>
+            
+
+            </div>
+         </section>
+
+        <section id="cursos" class="catalogo">
+
+            <div class="container">
+
+                <div class="section-header">
+                    <h2 id="catalogo_titulo" class="titulo_secao">Catalogo de cursos</h2>
+                    <p>Escolha um curso para acessar a pagina com os videos.</p>
+                </div>
+
+                <!-- Cards dos cursos geral -->
+                <div class="cards_cursos" id="cards_cursos"></div>
+                
+                
+                <div class="carregar_mais">
+                    <button class="btn_bt" type="button">Carregar mais</button>
+                </div>
+            </div>
+        </section>  
+
+
+
+        <section class="steps">
+            <div class="container">
+                        <h2 id="titulo_passos" class="secao_titulo">Como assistir</h2>
+                <ol class="lista_num">
+                    <li>Escolha o curso no catalogo.</li>
+                    <li>Acesse a playlist com os vídeos.</li>
+                    <li>Aproveite os conteúdos e enriqueça seu conhecimento.</li>
+                </ol>
+            </div>
+        </section>
+    </main>
+    
+   <script src="js/script.js"></script>
+
+    </body>
+</html>
