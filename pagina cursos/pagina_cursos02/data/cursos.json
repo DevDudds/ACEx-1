@@ -1,0 +1,75 @@
+
+[
+    {
+        "id": 1,
+        "titulo": "Desenvolvimento Web",
+        "area": "Frontend",
+        "duracao":"40",
+        "imagem": "img/minecraft.webp",
+        "descricao": "HTML, CSS e JavaScript para projetos reais.",
+        "destaque": true
+    },
+    {
+        "id": 2,
+        "titulo": "Gestão de Projetos",
+        "area": "Administração",
+        "duracao": "32",
+        "imagem": "img/minecraft.webp",
+        "descricao": "Metodologias ágeis, cronogramas e resultados.",
+        "destaque": false
+    },
+    {
+        "id": 3,
+        "titulo": "Automação Industrial",
+        "area": "Outros",
+        "duracao": "36",
+        "imagem": "img/minecraft.webp",
+        "descricao": "Sensores, CLP e supervisão de processos.",
+        "destaque": false
+    },
+    {
+        "id": 4,
+        "titulo": "Redes de Computadores",
+        "area": "Hardware",
+        "duracao": "40",
+        "imagem": "img/minecraft.webp",
+        "descricao": "Conceitos de redes, protocolos e configuração básica.",
+        "destaque": true
+    },
+    {
+        "id": 5,
+        "titulo": "Primeiros Socorros",
+        "area": "Outros",
+        "duracao": "12",
+        "imagem": "img/minecraft.webp",
+        "descricao": "Procedimentos essenciais para atendimento inicial.",
+        "destaque": false
+    },
+    {
+        "id": 6,
+        "titulo": "Arduínos e IoT",
+        "area": "Hardware",
+        "duracao": "24",
+        "imagem": "img/minecraft.webp",
+        "descricao": "Estratégias para engajar estudantes e avaliar resultados.",
+        "destaque": false
+    },
+    {
+        "id": 7,
+        "titulo": "Planejamento Estratégico",
+        "area": "Administração",
+        "duracao": "20",
+        "imagem": "img/minecraft.webp",
+        "descricao": "Ferramentas para definir metas, indicadores e ações.",
+        "destaque": false
+    },
+    {
+        "id": 8,
+        "titulo": "Banco de Dados",
+        "area": "Backend",
+        "duracao": "30",
+        "imagem": "img/minecraft.webp",
+        "descricao": "Modelagem, SQL e boas práticas de administração.",
+        "destaque": true
+    }
+]
