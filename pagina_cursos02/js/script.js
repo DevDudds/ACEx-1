@@ -18,43 +18,22 @@ const selectArea = document.querySelector('#area');
 
 filterForm.addEventListener('submit', (event) => {
     event.preventDefault();
+
     const termoBuscado = searchField.value.toLowerCase();
-    
-    const filteredCourses = allCourses.filter(curso => {
-        const tituloCourse = curso.titulo.toLowerCase();
-        return tituloCourse.includes(termoBuscado);
-    })
+    const areaEscolhida = selectArea.value.toLowerCase();
 
     const filteredCourses = allCourses.filter(curso => {
         const areaCourse = curso.area.toLowerCase();
-        return areaCourse === selectArea.value;
+        const tituloCourse = curso.titulo.toLowerCase();
+
+        const textOk = (tituloCourse.includes(termoBuscado));
+        const areaOk = (areaEscolhida === "" || areaEscolhida === areaCourse);
+
+        return textOk && areaOk;
     })
 
     renderCourses(filteredCourses);
 })
-
-
-/*filterForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const termoBuscado = searchField.value.toLowerCase();
-    
-    const filteredCourses = allCourses.filter(curso => {
-        const tituloCourse = curso.titulo.toLowerCase();
-        return tituloCourse.includes(termoBuscado);
-    })
-
-    renderCourses(filteredCourses);
-})
-
-selectArea.addEventListener('input', (event) => {
-    event.preventDefault();
-    const filteredCourses = allCourses.filter(curso => {
-        const areaCourse = curso.area.toLowerCase();
-        return areaCourse === selectArea.value;
-    })
-    
-    renderCourses(filteredCourses);
-})*/
 
 function spawnCard(curso){
     return `
