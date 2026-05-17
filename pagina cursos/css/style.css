@@ -14,6 +14,76 @@
 * {
     box-sizing: border-box;
 }
+.navbar{
+    width: 100%;
+    background-color: var(--accent-dark);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo{
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.nav_menu{
+    display: flex;
+    gap: 20px;
+}
+
+.nav_menu a{
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav_menu a:hover{
+    color: #60a5fa;
+}
+
+.hamburguer{
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.nav_menu a{
+    padding: 10px 0;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 768px){
+
+    .navbar{
+        flex-wrap: wrap;
+    }
+
+    .hamburguer{
+        display: block;
+    }
+
+    .nav_menu{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 20px;
+        gap: 15px;
+    }
+
+    .nav_menu.active{
+        display: flex;
+    }
+}
 
 body {
     margin: 0;
@@ -160,8 +230,9 @@ input {
 
 .cards_cursos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 320px));
     gap: 18px;
+    justify-content: center;
 }
 
 .card_curso {

@@ -7,7 +7,21 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+<header class="navbar">
+    <div class="logo">
+        IFBA Cursos
+    </div>
+
+    <button class="hamburguer" id="hamburguer">
+        ☰
+    </button>
+
+    <nav class="nav_menu" id="nav_menu">
+        <a href="#topo">Início</a>
+        <a href="#destaques">Destaques</a>
+        <a href="#cursos">Cursos</a>
+    </nav>
+</header>
 
     <main id="topo">
         <section class="hero">
@@ -35,8 +49,11 @@
                 <form class="filters__form" action="#" method="get">
                     <div class="field">
                         <label for="area">Área</label>
-                        <select id="area" >
-                            <option value="tecnologia">Tecnologia</option>
+                        <select id="area">
+                           <option value="todos">Todas</option>
+                           <option value="tecnologia">Tecnologia</option>
+                           <option value="design">Design</option>
+                           <option value="banco de dados">Banco de Dados</option>
                         </select>
                     </div>
 
