@@ -39,6 +39,7 @@ body {
     background-color: aliceblue;
 }
 
+
 .btn-inicio a {
     text-decoration: none;
     color: white;
@@ -65,28 +66,34 @@ body {
 .alunos {
     border: 8px orangered solid;
     border-radius: 16px;
-    width: auto;
+    width: 100%;
     max-width: 688px;
     height: auto;
 }
 
 @media (max-width: 500px){
     .alunos {
-        max-width: 400px;
+        border-width: 3px;
     }
+    
     .inicio {
         width: auto;
         margin-bottom: 30px;
-    }
-    .inicio {
         align-items: center;
         text-align: center;
     }
+
+    .inicial {
+        justify-content: center;
+    }
+
 }
 
 .card {
     display: flex;
     justify-content: center;
+    width: 45%;
+    min-width: 300px;
 }
 
 /* Segunda section */
@@ -126,6 +133,7 @@ body {
 .negocio p:last-child{
     color: rgb(113, 113, 113);
 }
+
 .img-negocio {
     width: 50px;
     height: 50px;
