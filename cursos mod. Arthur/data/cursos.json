@@ -1,5 +1,4 @@
-{
-  "cursos": [
+[
     {
       "imagem": "imgs/EDUXMTFODA2.jpg",
       "categoria": "Tecnologia",
@@ -73,4 +72,4 @@
       "destaque": true
     }
   ]
-}
+
