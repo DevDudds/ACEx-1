@@ -8,7 +8,7 @@ body {
 }
 /* Preciso fazer um root com as cores principais */
 :root {
-    --cor-principal: green;
+    --cor-principal: #48b456;
 }
 
 .inicio h1 {
@@ -36,7 +36,7 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 10% 10% 5% 10%;
-    background-color: aliceblue;
+    background-color: rgb(235, 235, 235);
 }
 
 
@@ -46,7 +46,7 @@ body {
 }
 
 .btn-inicio {
-    background-color: green;
+    background-color: #48b456;
     color: white;
     width: 180px;
     height: 58px;
@@ -58,13 +58,13 @@ body {
 }
 
 .btn-inicio:hover{
-    background-color: rgb(0, 158, 0);
+    background-color: #48b456;
     transition: 1s;
 }
 
 
 .alunos {
-    border: 8px orangered solid;
+    border: 8px #48b456 solid;
     border-radius: 16px;
     width: 100%;
     max-width: 688px;
@@ -107,7 +107,7 @@ body {
 }
 
 .sobre-curso h1 {
-    color: green;
+    color: #48b456;
 }
 
 .sobre-curso p {
@@ -115,8 +115,8 @@ body {
     text-align: center;
 }
 
-.negocio {
-    background-color: aliceblue;
+.info {
+    background-color: #dadada;
     border: 1px rgb(211, 211, 211) solid;
     border-radius: 8px;
     padding: 15px;
@@ -125,16 +125,16 @@ body {
     transition: 0.2s;
 }
 
-.negocio:hover {
-    border-color: green;
+.info:hover {
+    border-color: #48b456;
     transition: 0.2s;
 }
 
-.negocio p:last-child{
+.info p:last-child{
     color: rgb(113, 113, 113);
 }
 
-.img-negocio {
+.img-info {
     width: 50px;
     height: 50px;
 }
@@ -144,4 +144,13 @@ body {
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
+}
+
+.egresso {
+    background-color: #dadada;
+    border: 1px rgb(211, 211, 211) solid;
+    border-radius: 8px;
+    padding: 30px;
+    width: 80%;
+    height: 250px;
 }
