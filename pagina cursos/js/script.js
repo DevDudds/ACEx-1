@@ -85,9 +85,10 @@ function filtrarCursos() {
   mostrarCursos(cursosFiltrados);
 }
 
-const hamburguer = document.getElementById("hamburguer");
-const navMenu = document.getElementById("nav_menu");
+const hamburguer = document.querySelector(".hamburguer-container");
+const navigation = document.querySelector(".navigation");
 
 hamburguer.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
+  hamburguer.classList.toggle("active");
+  navigation.classList.toggle("active");
 });

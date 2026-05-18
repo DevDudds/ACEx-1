@@ -4,24 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IFBA Paulo Afonso | Minicursos</title>
-    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/898f59f198.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/cursos.css">
 </head>
 <body>
-<header class="navbar">
-    <div class="logo">
-        IFBA Cursos
-    </div>
+    <header>
+        <div class="container">
+            <div class="logo-container"><img class="logo" src="../assets/images/logo-ifba.png" alt=""></div>
 
-    <button class="hamburguer" id="hamburguer">
-        ☰
-    </button>
+            <ul class="hamburguer-container hide" type="none">
+                <li class="hamburguer"></li>
+                <li class="hamburguer"></li>
+                <li class="hamburguer"></li>
+            </ul>
 
-    <nav class="nav_menu" id="nav_menu">
-        <a href="#topo">Início</a>
-        <a href="#destaques">Destaques</a>
-        <a href="#cursos">Cursos</a>
-    </nav>
-</header>
+            <nav class="navigation">
+                <ul type="none">
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="">Sobre o Curso</a></li>
+                    <li><a href="">Minicursos</a></li>
+                    <li><a href="../ebooks/ebooks.html">E-books</a></li>
+                    <li><a href="">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
 
     <main id="topo">
         <section class="hero">
@@ -100,8 +109,6 @@
             </div>
         </section>  
 
-
-
         <section class="steps">
             <div class="container">
                         <h2 id="titulo_passos" class="secao_titulo">Como assistir</h2>
@@ -113,8 +120,50 @@
             </div>
         </section>
     </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col footer-logo">
+                <img class="logo" src="../assets/images/logo-ifba-branca.png" alt="">
+            </div>
+
+            <div class="footer-col">
+                <h3>Links Rápidos<h3>
+                <ul type="none">
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Sobre o Curso</a></li>
+                    <li><a href="#">Grade Curricular</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Outros cursos</h3>    
+                <ul type="none">
+                    <li><a href="#">Engenharia Elétrica</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Redes Sociais</h3>
+                <p>Siga-nos nas redes sociais e fique por dentro das novidades</p>
+
+                <div class="redes">
+                    <div>
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-desc">
+            <p>&copy; 2026 IFBA - Instituto Federal da Bahia. Todos os direitos reservados.</p>
+        </div>
+    </footer>
     
-   <script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 
     </body>
 </html>

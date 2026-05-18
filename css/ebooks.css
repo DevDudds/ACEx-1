@@ -20,7 +20,7 @@
 .card {
     min-width: 240px;
     width: 30%;
-    height: 744px;
+    min-height: 744px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.474);
     background-color: #fff;
     border-radius: 20px;
@@ -28,11 +28,15 @@
 }
 
 .card-info {
-    height: calc(100% - 427px);
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 20px;
+}
+
+.card-info p {
+    margin: 5px 0;
 }
 
 .card-image {
