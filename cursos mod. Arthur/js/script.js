@@ -4,7 +4,7 @@ async function carregarCursos(){
     try {
         const resposta = await fetch('data/cursos.json');
         cursos = await resposta.json();
-        gerarCursos(cursos);
+        gerarCursos(cursos.slice(0, 8));
     }catch(erro) {
         console.log("Erro ao carregar o JSON:", erro);
     }
@@ -16,31 +16,40 @@ const filterForm = document.querySelector('.filters__form');
 const inputBusca = document.querySelector('#busca');
 const inputArea = document.querySelector('#area');
 
-filterForm.addEventListener('submit', (event) => {
-    event.preventDefault();
-
-    const termoBuscado = inputBusca.value.toLowerCase();
+function aplicarFiltros() {
+    
+    const termoBuscado = inputBusca.value.toLowerCase().trim();
     const areaEscolhida = inputArea.value.toLowerCase(); 
 
     const cursosFiltrados = cursos.filter(curso => {
-        const areaCurso = curso.area.toLowerCase();
-        const tituloCurso = curso.titulo.toLowerCase();
 
-        const tituloOk = (tituloCurso.includes(termoBuscado));
-        const areaOk = (areaEscolhida === "" || areaEscolhida === areaCurso);
+        const categoriaCurso = (curso.categoria || "").toLowerCase();
+        const tituloCurso = (curso.titulo || "").toLowerCase();
+
+        const tituloOk = tituloCurso.includes(termoBuscado);
+        const areaOk = areaEscolhida === "" || categoriaCurso.includes(areaEscolhida);
 
         return tituloOk && areaOk;
-    })
+    });
 
     gerarCursos(cursosFiltrados);
-})
+
+    btnCarregarMais.style.display = 'none';
+}
+
+inputBusca.addEventListener('input', aplicarFiltros); 
+inputArea.addEventListener('change', aplicarFiltros); 
+
+filterForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+});
 
 function gerarCard(curso){
     return `
-        <article class="card">
+        <article class="card_curso">
             <div class="dados">
                 <img class="img_card" src="${curso.imagem}" alt="Imagem do curso">
-                <span class="card__tag">${curso.area}</span>
+                <span class="card__tag">${curso.categoria}</span>
             </div>
             <div class="card__body">
                 <h3>${curso.titulo}</h3>
@@ -64,3 +73,10 @@ function gerarCursos(listCursos){
     const htmlDtqCards = cursos.filter(curso => curso.destaque === true).map(curso => gerarCard(curso)).join('');
     dtqCards.innerHTML = htmlDtqCards;
 }
+
+const btnCarregarMais = document.querySelector('#carregar_mais');
+
+btnCarregarMais.addEventListener('click', () => {
+    gerarCursos(cursos);
+    btnCarregarMais.style.display = 'none';
+})

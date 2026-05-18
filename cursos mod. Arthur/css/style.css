@@ -112,6 +112,7 @@ p {
 .btn:hover,
 .btn2:hover,
 .btn_bt:hover {
+    cursor: pointer;
     transform: translateY(-2px);
 }
 
@@ -160,19 +161,24 @@ input {
 
 .cards_cursos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 260px));
     gap: 18px;
 }
 
 .card_curso {
+    max-width: 28vh;
     background: var(--card);
     border-radius: 16px;
     box-shadow: var(--shadow);
     overflow: hidden;
     display: flex;
     flex-direction: column;
-}
 
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+    cursor: pointer;
+}
 
 .dados {
     height: 140px;
@@ -260,6 +266,15 @@ input {
     color: var(--muted);
 }
 
+.card_curso:hover{
+
+    transform:
+        translateY(-10px)
+        scale(1.02);
+
+    box-shadow:
+        0 15px 30px rgba(0,0,0,0.18);
+}
 
 @media (max-width: 720px) {
     .dados
